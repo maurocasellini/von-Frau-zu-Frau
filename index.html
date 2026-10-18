@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>von Frau zu Frau · im Aufbau</title>
+<meta name="description" content="von Frau zu Frau. Ein neues Projekt von Sara Emanuela Casellini-Machado Sousa, Fachärztin für Gynäkologie in Liechtenstein. Die Seite ist im Aufbau.">
+<meta name="theme-color" content="#F6F1EE">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="wordmark" href="./">von Frau zu Frau</a>
+    <span class="label">Liechtenstein</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="status"><span class="dot" aria-hidden="true"></span><span class="label">Projekt im Aufbau</span></div>
+        <h1>von Frau <em>zu Frau</em>.</h1>
+        <p class="lede">Ein Raum für Fragen, die Frauen sich stellen. Klar, ehrlich, ärztlich begleitet.</p>
+        <p class="body">Hier entsteht gerade etwas Neues. Die Seite ist noch im Aufbau, die Inhalte wachsen Schritt für Schritt. Wenn du wissen möchtest, wann es losgeht, trag dich unten ein.</p>
+      </div>
+      <div class="hero-symbol">
+        <img src="assets/symbol.webp" width="404" height="537" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="news">
+        <div>
+          <span class="label">News</span>
+          <h2>Als Erste <em>erfahren</em>, wann es losgeht.</h2>
+          <p>Ein kurzes Mail, wenn die Seite steht und wenn es Neues gibt. Selten, ruhig, ohne Werbung. Abmelden geht jederzeit mit einem Klick.</p>
+        </div>
+        <div class="card">
+          <form id="news-form" novalidate>
+            <label class="field">
+              <span class="label">Vorname (optional)</span>
+              <input class="input" type="text" name="vorname" autocomplete="given-name" maxlength="80">
+            </label>
+            <label class="field">
+              <span class="label">E-Mail</span>
+              <input class="input" type="email" name="email" autocomplete="email" required maxlength="200">
+            </label>
+            <label class="hp" aria-hidden="true">Bitte leer lassen <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            <label class="check">
+              <input type="checkbox" name="einwilligung" required>
+              <span>Ich möchte News zu «von Frau zu Frau» per E-Mail erhalten. Die Einwilligung kann ich jederzeit widerrufen. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span>
+            </label>
+            <button class="btn" type="submit">Anmelden</button>
+            <p class="form-note" id="news-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ueber">
+      <div class="person">
+        <div>
+          <span class="label">Wer dahinter steht</span>
+          <p class="name" style="margin-top:16px;">Sara Emanuela<br>Casellini-Machado Sousa</p>
+          <p class="role">Ärztin · Fachärztin für Gynäkologie</p>
+          <p class="place">Liechtenstein</p>
+        </div>
+        <div>
+          <p>Als Frauenärztin begleite ich Frauen durch ganz unterschiedliche Lebensphasen. Viele Fragen kommen in der Sprechstunde zu kurz. Oder sie werden gar nicht erst gestellt.</p>
+          <p>«von Frau zu Frau» soll dafür Platz schaffen. Verständlich erklärt, fachlich fundiert, ohne Panik und ohne Floskeln.</p>
+          <p>Mehr dazu, sobald die Seite steht.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="orn" aria-hidden="true">· · ·</div>
+      <p>«Keine Frage ist zu klein. Und keine zu persönlich.»</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="jahr">2026</span> von Frau zu Frau · Liechtenstein</span>
+    <nav>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </footer>
+</div>
+
+<script>
+/*
+  Newsletter-Anmeldung.
+  ENDPOINT: URL des Newsletter-Dienstes (z.B. Brevo- oder Mailchimp-Formular-Action).
+  Solange leer, öffnet das Formular ein vorbereitetes Mail an KONTAKT_EMAIL.
+*/
+var ENDPOINT = '';
+var KONTAKT_EMAIL = 'kontakt@vonfrauzufrau.li';
+
+document.getElementById('jahr').textContent = new Date().getFullYear();
+
+document.getElementById('news-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var note = document.getElementById('news-note');
+  note.className = 'form-note';
+  if (f.website.value) return;
+  var email = f.email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note.textContent = 'Bitte eine gültige E-Mail-Adresse eingeben.'; f.email.focus(); return; }
+  if (!f.einwilligung.checked) { note.textContent = 'Bitte die Einwilligung bestätigen.'; return; }
+
+  if (!ENDPOINT) {
+    var body = 'Bitte nehmt mich in die News-Liste auf.\n\nE-Mail: ' + email + (f.vorname.value.trim() ? '\nVorname: ' + f.vorname.value.trim() : '');
+    window.location.href = 'mailto:' + KONTAKT_EMAIL + '?subject=' + encodeURIComponent('News-Anmeldung') + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Dein Mailprogramm öffnet sich. Einfach absenden, fertig.';
+    note.className = 'form-note ok';
+    return;
+  }
+
+  var btn = f.querySelector('button');
+  btn.disabled = true;
+  fetch(ENDPOINT, { method: 'POST', body: new FormData(f), mode: 'no-cors' })
+    .then(function () {
+      f.reset();
+      note.textContent = 'Danke. Bitte bestätige die Anmeldung über den Link im Mail, das wir dir gerade geschickt haben.';
+      note.className = 'form-note ok';
+    })
+    .catch(function () {
+      note.textContent = 'Das hat nicht geklappt. Bitte später nochmals versuchen.';
+    })
+    .then(function () { btn.disabled = false; });
+});
+</script>
+</body>
+</html>
