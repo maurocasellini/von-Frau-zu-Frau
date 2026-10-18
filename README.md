@@ -13,7 +13,7 @@ Kein Build-Schritt. `index.html` direkt öffnen oder als statische Seite deploye
 
 ## Offen vor dem Livegang
 
-1. Betreiberin ist stellvertretend die CM Ventures Anstalt, Duxgass 2, 9494 Schaan. Handelsregister-Nummer im Impressum ergänzen. Gelb markierte Stellen (`class="todo"`) suchen.
+1. Betreiberin ist stellvertretend die CM Ventures Anstalt, Duxgass 2, 9494 Schaan. Gelb markierte Stellen (`class="todo"`) suchen.
 2. E-Mail-Adresse und Domain: Platzhalter `kontakt@vonfrauzufrau.li` überall ersetzen (auch `KONTAKT_EMAIL` in `index.html`).
 3. Newsletter-Dienst wählen (z.B. Brevo, EU-Hosting) und dessen Formular-URL als `ENDPOINT` in `index.html` setzen. Bis dahin öffnet das Formular ein vorbereitetes Mail. Double-Opt-in im Dienst aktivieren. Name des Dienstes in `datenschutz.html` Punkt 4 eintragen.
 4. Hosting-Anbieter in `datenschutz.html` Punkt 2 eintragen.
