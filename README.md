@@ -6,7 +6,7 @@ Kein Build-Schritt. `index.html` direkt öffnen oder als statische Seite deploye
 
 ## Sprachen
 
-Deutsch (Root), Englisch, Portugiesisch, Spanisch, Französisch (`en/`, `pt/`, `es/`, `fr/`). Startseiten und übersetzte Datenschutzerklärungen werden mit `python3 tools/build.py` erzeugt. Texte nur in `tools/build.py` ändern, nicht in den erzeugten Dateien. `datenschutz.html` (massgebend) und `impressum.html` bleiben deutsch und von Hand gepflegt.
+Deutsch (Root), Englisch, Portugiesisch, Spanisch (`en/`, `pt/`, `es/`). Französisch ist in `tools/build.py` vorbereitet, aber nicht aktiv. Startseiten und übersetzte Datenschutzerklärungen werden mit `python3 tools/build.py` erzeugt. Texte nur in `tools/build.py` ändern, nicht in den erzeugten Dateien. `datenschutz.html` (massgebend) und `impressum.html` bleiben deutsch und von Hand gepflegt.
 
 ## Dateien
 
@@ -23,4 +23,4 @@ Deutsch (Root), Englisch, Portugiesisch, Spanisch, Französisch (`en/`, `pt/`, `
 4. Hosting: NEXEUM Digital Services GmbH, Vaduz (eingetragen). Klären, wo die Server stehen und ob ein AV-Vertrag besteht.
 5. Impressum: Ärztekammer und Aufsichtsbehörde. Facharzttitel (Schweiz) gegenprüfen.
 6. Datenschutz und Impressum vor dem Livegang juristisch gegenlesen lassen. Die Texte sind ein Entwurf, keine Rechtsberatung.
-7. Übersetzungen von einer Muttersprachlerin gegenlesen lassen (PT europäisch, FR mit «vous»).
+7. Übersetzungen von einer Muttersprachlerin gegenlesen lassen (PT europäisch).

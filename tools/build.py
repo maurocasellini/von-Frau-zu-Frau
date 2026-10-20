@@ -12,7 +12,8 @@ import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EMAIL = 'kontakt@frauenkompass.ch'
-LANGS = ['de', 'en', 'pt', 'es', 'fr']
+# Französisch ist vorbereitet (Texte unten), aber nicht aktiv. Für FR: 'fr' hier ergänzen.
+LANGS = ['de', 'en', 'pt', 'es']
 
 T = {
 'de': dict(
@@ -603,5 +604,5 @@ def write(path, s):
 if __name__ == '__main__':
     for lang in LANGS:
         write('index.html' if lang == 'de' else f'{lang}/index.html', build_home(lang))
-    for lang in P:
+    for lang in [l for l in P if l in LANGS]:
         write(f'{lang}/privacy.html', build_privacy(lang))
