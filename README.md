@@ -4,6 +4,10 @@ Statische Landing Page (Seite im Aufbau) für Sara Emanuela Casellini-Machado So
 
 Kein Build-Schritt. `index.html` direkt öffnen oder als statische Seite deployen (z.B. Vercel, Netlify).
 
+## Sprachen
+
+Deutsch (Root), Englisch, Portugiesisch, Spanisch, Französisch (`en/`, `pt/`, `es/`, `fr/`). Startseiten und übersetzte Datenschutzerklärungen werden mit `python3 tools/build.py` erzeugt. Texte nur in `tools/build.py` ändern, nicht in den erzeugten Dateien. `datenschutz.html` (massgebend) und `impressum.html` bleiben deutsch und von Hand gepflegt.
+
 ## Dateien
 
 - `index.html`: Landing Page mit News-Anmeldung
@@ -19,3 +23,4 @@ Kein Build-Schritt. `index.html` direkt öffnen oder als statische Seite deploye
 4. Hosting: NEXEUM Digital Services GmbH, Vaduz (eingetragen). Klären, wo die Server stehen und ob ein AV-Vertrag besteht.
 5. Impressum: Ärztekammer und Aufsichtsbehörde. Facharzttitel (Schweiz) gegenprüfen.
 6. Datenschutz und Impressum vor dem Livegang juristisch gegenlesen lassen. Die Texte sind ein Entwurf, keine Rechtsberatung.
+7. Übersetzungen von einer Muttersprachlerin gegenlesen lassen (PT europäisch, FR mit «vous»).

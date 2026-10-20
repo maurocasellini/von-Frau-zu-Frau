@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frauenkompass · coming soon</title>
+<meta name="description" content="Frauenkompass. All about menopause. A new project by Sara Casellini-Machado Sousa, specialist in gynaecology and obstetrics in Liechtenstein. This site is under construction.">
+<meta name="theme-color" content="#F6F1EE">
+<link rel="alternate" hreflang="de" href="../index.html">
+<link rel="alternate" hreflang="en" href="../en/index.html">
+<link rel="alternate" hreflang="pt" href="../pt/index.html">
+<link rel="alternate" hreflang="es" href="../es/index.html">
+<link rel="alternate" hreflang="fr" href="../fr/index.html">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="wordmark" href="index.html">Frauenkompass</a>
+    <nav class="lang" aria-label="Language"><a href="../index.html" hreflang="de" lang="de">DE</a><a href="../en/index.html" hreflang="en" lang="en" aria-current="page">EN</a><a href="../pt/index.html" hreflang="pt" lang="pt">PT</a><a href="../es/index.html" hreflang="es" lang="es">ES</a><a href="../fr/index.html" hreflang="fr" lang="fr">FR</a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Well informed through menopause</h1>
+        <p class="lede">From perimenopause to the years after menopause. Clear, honest, with a doctor at your side.</p>
+        <p class="body">Something new is taking shape here. The site is still under construction and the content will grow step by step. If you would like to know when it launches, sign up below.</p>
+      </div>
+      <div class="hero-symbol">
+        <img src="../assets/symbol.webp" width="404" height="537" alt="" aria-hidden="true">
+      </div>
+    </section>
+
+    <section class="section" id="news">
+      <div class="news">
+        <div>
+          <h2>Get notified when we launch</h2>
+          <p>A short email when the site is ready and when there is news. Rarely, calmly, no advertising. You can unsubscribe at any time with one click.</p>
+        </div>
+        <div class="card">
+          <form id="news-form" novalidate>
+            <input type="hidden" name="sprache" value="en">
+            <label class="field">
+              <span>First name <span class="opt">(optional)</span></span>
+              <input class="input" type="text" name="vorname" autocomplete="given-name" maxlength="80">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input class="input" type="email" name="email" autocomplete="email" required maxlength="200">
+            </label>
+            <label class="hp" aria-hidden="true">Please leave empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            <label class="check">
+              <input type="checkbox" name="einwilligung" required>
+              <span>I would like to receive news from Frauenkompass by email. I can withdraw my consent at any time. More in the <a href="privacy.html">privacy policy</a>.</span>
+            </label>
+            <button class="btn" type="submit">Sign up</button>
+            <p class="form-note" id="news-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ueber">
+      <div class="person">
+        <figure class="portrait">
+          <img src="../assets/sara.webp" srcset="../assets/sara-480.webp 480w, ../assets/sara.webp 960w" sizes="(max-width: 820px) 360px, 420px" width="960" height="1200" alt="Sara Casellini-Machado Sousa" loading="lazy">
+          <figcaption>
+            <span class="name">Sara Casellini-Machado Sousa</span>
+            <span class="role">Specialist in gynaecology and obstetrics</span>
+          </figcaption>
+        </figure>
+        <div class="bio">
+          <h2>About me</h2>
+          <p>I was born in Lisbon and grew up in Basel, where I also studied medicine. I then moved to eastern Switzerland and trained as a specialist in gynaecology and obstetrics in Grabs and Chur, most recently as a senior physician. Today I live in Liechtenstein with my husband and our two children. Since 2023 I have been working at the Gynorina practice in Buchs, Switzerland.</p>
+          <p>Menopause often begins years before the last period and its effects continue long after. In a regular consultation there is rarely enough time for the questions women really have during this phase. Some never get asked at all. Frauenkompass is meant to make room for them: clearly explained, medically sound, without alarm and without empty phrases.</p>
+          <p>I speak German, Portuguese, English, Spanish and French.</p>
+
+          <dl class="cv">
+            <dt>2013</dt><dd>Degree in human medicine, University of Basel</dd>
+            <dt>2015–2019</dt><dd>Resident physician, women’s clinics at Grabs Hospital and Cantonal Hospital of Graubünden</dd>
+            <dt>2019–2022</dt><dd>Senior physician, women’s clinic, Grabs Hospital</dd>
+            <dt>2022</dt><dd>Specialist title in gynaecology and obstetrics</dd>
+            <dt>Since Feb. 2023</dt><dd>Specialist, Gynorina practice, Buchs SG</dd>
+            <dt>Further training</dt><dd>Certificate in obstetric ultrasound</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <p>“No question is too small. And none too personal.”</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="jahr">2026</span> Frauenkompass · Liechtenstein</span>
+    <nav>
+      <a href="../impressum.html">Legal notice</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </footer>
+</div>
+
+<script>
+/*
+  Newsletter-Anmeldung.
+  ENDPOINT: URL des Newsletter-Dienstes (z.B. Brevo- oder Mailchimp-Formular-Action).
+  Solange leer, öffnet das Formular ein vorbereitetes Mail an KONTAKT_EMAIL.
+*/
+var ENDPOINT = '';
+var KONTAKT_EMAIL = 'kontakt@frauenkompass.ch';
+var TXT = {
+  badEmail: 'Please enter a valid email address.',
+  noConsent: 'Please confirm your consent.',
+  mailSubject: 'Newsletter sign-up',
+  mailBody: 'Please add me to the news list.',
+  mailName: 'First name',
+  mailOpen: 'Your email app is opening. Just send the message.',
+  thanks: 'Thank you. Please confirm your sign-up using the link in the email we just sent you.',
+  error: 'Something went wrong. Please try again later.'
+};
+
+document.getElementById('jahr').textContent = new Date().getFullYear();
+
+document.getElementById('news-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var note = document.getElementById('news-note');
+  note.className = 'form-note';
+  if (f.website.value) return;
+  var email = f.email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note.textContent = TXT.badEmail; f.email.focus(); return; }
+  if (!f.einwilligung.checked) { note.textContent = TXT.noConsent; return; }
+
+  if (!ENDPOINT) {
+    var body = TXT.mailBody + '\n\nE-Mail: ' + email + (f.vorname.value.trim() ? '\n' + TXT.mailName + ': ' + f.vorname.value.trim() : '') + '\n[en]';
+    window.location.href = 'mailto:' + KONTAKT_EMAIL + '?subject=' + encodeURIComponent(TXT.mailSubject) + '&body=' + encodeURIComponent(body);
+    note.textContent = TXT.mailOpen;
+    note.className = 'form-note ok';
+    return;
+  }
+
+  var btn = f.querySelector('button');
+  btn.disabled = true;
+  fetch(ENDPOINT, { method: 'POST', body: new FormData(f), mode: 'no-cors' })
+    .then(function () {
+      f.reset();
+      note.textContent = TXT.thanks;
+      note.className = 'form-note ok';
+    })
+    .catch(function () {
+      note.textContent = TXT.error;
+    })
+    .then(function () { btn.disabled = false; });
+});
+</script>
+</body>
+</html>

@@ -6,6 +6,11 @@
 <title>Frauenkompass · im Aufbau</title>
 <meta name="description" content="Frauenkompass. Rund um die Wechseljahre. Ein neues Projekt von Sara Casellini-Machado Sousa, Fachärztin für Gynäkologie und Geburtshilfe in Liechtenstein. Die Seite ist im Aufbau.">
 <meta name="theme-color" content="#F6F1EE">
+<link rel="alternate" hreflang="de" href="index.html">
+<link rel="alternate" hreflang="en" href="en/index.html">
+<link rel="alternate" hreflang="pt" href="pt/index.html">
+<link rel="alternate" hreflang="es" href="es/index.html">
+<link rel="alternate" hreflang="fr" href="fr/index.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,8 +19,8 @@
 
 <div class="wrap">
   <header class="top">
-    <a class="wordmark" href="./">Frauenkompass</a>
-    <span class="note">Seite im Aufbau</span>
+    <a class="wordmark" href="index.html">Frauenkompass</a>
+    <nav class="lang" aria-label="Sprache"><a href="index.html" hreflang="de" lang="de" aria-current="page">DE</a><a href="en/index.html" hreflang="en" lang="en">EN</a><a href="pt/index.html" hreflang="pt" lang="pt">PT</a><a href="es/index.html" hreflang="es" lang="es">ES</a><a href="fr/index.html" hreflang="fr" lang="fr">FR</a></nav>
   </header>
 
   <main>
@@ -38,6 +43,7 @@
         </div>
         <div class="card">
           <form id="news-form" novalidate>
+            <input type="hidden" name="sprache" value="de">
             <label class="field">
               <span>Vorname <span class="opt">(optional)</span></span>
               <input class="input" type="text" name="vorname" autocomplete="given-name" maxlength="80">
@@ -107,6 +113,16 @@
 */
 var ENDPOINT = '';
 var KONTAKT_EMAIL = 'kontakt@frauenkompass.ch';
+var TXT = {
+  badEmail: 'Bitte eine gültige E-Mail-Adresse eingeben.',
+  noConsent: 'Bitte die Einwilligung bestätigen.',
+  mailSubject: 'News-Anmeldung',
+  mailBody: 'Bitte nehmt mich in die News-Liste auf.',
+  mailName: 'Vorname',
+  mailOpen: 'Dein Mailprogramm öffnet sich. Einfach absenden, fertig.',
+  thanks: 'Danke. Bitte bestätige die Anmeldung über den Link im Mail, das wir dir gerade geschickt haben.',
+  error: 'Das hat nicht geklappt. Bitte später nochmals versuchen.'
+};
 
 document.getElementById('jahr').textContent = new Date().getFullYear();
 
@@ -117,13 +133,13 @@ document.getElementById('news-form').addEventListener('submit', function (e) {
   note.className = 'form-note';
   if (f.website.value) return;
   var email = f.email.value.trim();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note.textContent = 'Bitte eine gültige E-Mail-Adresse eingeben.'; f.email.focus(); return; }
-  if (!f.einwilligung.checked) { note.textContent = 'Bitte die Einwilligung bestätigen.'; return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note.textContent = TXT.badEmail; f.email.focus(); return; }
+  if (!f.einwilligung.checked) { note.textContent = TXT.noConsent; return; }
 
   if (!ENDPOINT) {
-    var body = 'Bitte nehmt mich in die News-Liste auf.\n\nE-Mail: ' + email + (f.vorname.value.trim() ? '\nVorname: ' + f.vorname.value.trim() : '');
-    window.location.href = 'mailto:' + KONTAKT_EMAIL + '?subject=' + encodeURIComponent('News-Anmeldung') + '&body=' + encodeURIComponent(body);
-    note.textContent = 'Dein Mailprogramm öffnet sich. Einfach absenden, fertig.';
+    var body = TXT.mailBody + '\n\nE-Mail: ' + email + (f.vorname.value.trim() ? '\n' + TXT.mailName + ': ' + f.vorname.value.trim() : '') + '\n[de]';
+    window.location.href = 'mailto:' + KONTAKT_EMAIL + '?subject=' + encodeURIComponent(TXT.mailSubject) + '&body=' + encodeURIComponent(body);
+    note.textContent = TXT.mailOpen;
     note.className = 'form-note ok';
     return;
   }
@@ -133,11 +149,11 @@ document.getElementById('news-form').addEventListener('submit', function (e) {
   fetch(ENDPOINT, { method: 'POST', body: new FormData(f), mode: 'no-cors' })
     .then(function () {
       f.reset();
-      note.textContent = 'Danke. Bitte bestätige die Anmeldung über den Link im Mail, das wir dir gerade geschickt haben.';
+      note.textContent = TXT.thanks;
       note.className = 'form-note ok';
     })
     .catch(function () {
-      note.textContent = 'Das hat nicht geklappt. Bitte später nochmals versuchen.';
+      note.textContent = TXT.error;
     })
     .then(function () { btn.disabled = false; });
 });

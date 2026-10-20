@@ -165,4 +165,12 @@ a:hover { border-bottom-color: var(--burgundy); }
 @media (max-width: 480px) {
   .wrap { padding: 0 16px; }
   .top .note { font-size: 13px; }
+  .lang { gap: 10px; }
 }
+
+/* Sprachwahl */
+.lang { display: flex; gap: 14px; font-size: 13px; letter-spacing: 0.04em; }
+.lang a { color: var(--grey); border-bottom: 1px solid transparent; }
+.lang a:hover { color: var(--burgundy); }
+.lang a[aria-current="page"] { color: var(--burgundy); border-bottom-color: var(--burgundy); }
+.legal .note { margin-bottom: 32px; }
