@@ -35,7 +35,7 @@ T = {
     'Ich spreche Deutsch, Portugiesisch, Englisch, Spanisch und Französisch.',
   ],
   cv=[
-    ('2013', 'Abschluss Humanmedizin, Universität Basel'),
+    ('2014', 'Abschluss Humanmedizin, Universität Basel'),
     ('2015–2019', 'Assistenzärztin, Frauenkliniken Spital Grabs und Kantonsspital Graubünden'),
     ('2019–2022', 'Oberärztin, Frauenklinik Spital Grabs'),
     ('2022', 'Facharzttitel Gynäkologie und Geburtshilfe'),
@@ -75,7 +75,7 @@ T = {
     'I speak German, Portuguese, English, Spanish and French.',
   ],
   cv=[
-    ('2013', 'Degree in human medicine, University of Basel'),
+    ('2014', 'Degree in human medicine, University of Basel'),
     ('2015–2019', 'Resident physician, women’s clinics at Grabs Hospital and Cantonal Hospital of Graubünden'),
     ('2019–2022', 'Senior physician, women’s clinic, Grabs Hospital'),
     ('2022', 'Specialist title in gynaecology and obstetrics'),
@@ -115,7 +115,7 @@ T = {
     'Falo alemão, português, inglês, espanhol e francês.',
   ],
   cv=[
-    ('2013', 'Licenciatura em Medicina, Universidade de Basileia'),
+    ('2014', 'Licenciatura em Medicina, Universidade de Basileia'),
     ('2015–2019', 'Médica interna, serviços de ginecologia e obstetrícia do Hospital de Grabs e do Hospital Cantonal dos Grisões'),
     ('2019–2022', 'Médica sénior, serviço de ginecologia e obstetrícia, Hospital de Grabs'),
     ('2022', 'Título de especialista em ginecologia e obstetrícia'),
@@ -155,7 +155,7 @@ T = {
     'Hablo alemán, portugués, inglés, español y francés.',
   ],
   cv=[
-    ('2013', 'Licenciatura en Medicina, Universidad de Basilea'),
+    ('2014', 'Licenciatura en Medicina, Universidad de Basilea'),
     ('2015–2019', 'Médica residente, clínicas de la mujer del Hospital de Grabs y del Hospital Cantonal de los Grisones'),
     ('2019–2022', 'Médica adjunta, clínica de la mujer, Hospital de Grabs'),
     ('2022', 'Título de especialista en ginecología y obstetricia'),
@@ -195,7 +195,7 @@ T = {
     'Je parle allemand, portugais, anglais, espagnol et français.',
   ],
   cv=[
-    ('2013', 'Diplôme de médecine humaine, Université de Bâle'),
+    ('2014', 'Diplôme de médecine humaine, Université de Bâle'),
     ('2015–2019', 'Médecin assistante, cliniques gynécologiques de l’hôpital de Grabs et de l’hôpital cantonal des Grisons'),
     ('2019–2022', 'Cheffe de clinique, clinique gynécologique, hôpital de Grabs'),
     ('2022', 'Titre de spécialiste en gynécologie et obstétrique'),
